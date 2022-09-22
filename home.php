@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    $log = isset($_SESSION['auth']);
-    if(!$log){
-        header('Location: index.php');
-    }
+    // session_start();
+    // $log = isset($_SESSION['auth']);
+    // if(!$log){
+    //     header('Location: index.php');
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>WELCOME <?php echo $_SESSION['auth']?></h2>
+    <h2>WELCOME </h2>
     <form method="POST">
         <button name="logout">Logout</button>
     </form>
@@ -22,7 +22,7 @@
 </html>
 <?php
     if(isset($_POST['logout'])){
-        session_destroy();
+        // session_destroy();
         header('Location: index.php');
     }
 
